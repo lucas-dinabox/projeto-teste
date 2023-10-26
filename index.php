@@ -16,6 +16,10 @@ if (!empty(TSession::getValue('theme')))
     if($theme){
         new TMessage('success', 'Temos um theme definido!');
     }
+
+    // fazendo mais um commit para testar conflitos
+
+    echo 'olha só mais um conflito!';
 }
 
 $menu_string = AdiantiMenuBuilder::parse('menu-slim.xml', $theme);
