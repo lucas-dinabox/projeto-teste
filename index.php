@@ -1,4 +1,7 @@
 <?php
+
+use Adianti\Widget\Dialog\TMessage;
+
 require_once 'init.php';
 $theme  = $ini['general']['theme'];
 new TSession;
