@@ -20,6 +20,10 @@ if (!empty(TSession::getValue('theme')))
         'deu errado!';
     }
 
+    // testando para ver se vamos ter conflitos
+
+    echo 'olha só o github nos ajudando!';
+
     // fazendo mais um commit para testar conflitos
 
     echo 'olha só mais um conflito!';
