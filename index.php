@@ -19,6 +19,10 @@ if (!empty(TSession::getValue('theme')))
     } else{
         'deu errado!';
     }
+
+    // fazendo mais um commit para testar conflitos
+
+    echo 'olha só mais um conflito!';
 }
 
 $menu_string = AdiantiMenuBuilder::parse('menu-slim.xml', $theme);
