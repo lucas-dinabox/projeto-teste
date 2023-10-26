@@ -9,7 +9,13 @@ if (!empty($_REQUEST['theme']))
 }
 if (!empty(TSession::getValue('theme')))
 {
-    $theme = TSession::getValue('theme');
+    // Utilizando um tema personalizado
+    $themeByStyleComponent = TSession::getValue('theme_dark');
+    if($themeByStyleComponent){
+        echo 'funcionou!';
+    } else{
+        'deu errado!';
+    }
 }
 
 $menu_string = AdiantiMenuBuilder::parse('menu-slim.xml', $theme);
