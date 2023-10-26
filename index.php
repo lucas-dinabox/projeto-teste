@@ -1,4 +1,7 @@
 <?php
+
+use Adianti\Widget\Dialog\TMessage;
+
 require_once 'init.php';
 $theme  = $ini['general']['theme'];
 new TSession;
@@ -10,6 +13,9 @@ if (!empty($_REQUEST['theme']))
 if (!empty(TSession::getValue('theme')))
 {
     $theme = TSession::getValue('theme');
+    if($theme){
+        new TMessage('success', 'Temos um theme definido!');
+    }
 }
 
 $menu_string = AdiantiMenuBuilder::parse('menu-slim.xml', $theme);
