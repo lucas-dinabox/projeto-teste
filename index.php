@@ -12,9 +12,12 @@ if (!empty($_REQUEST['theme']))
 }
 if (!empty(TSession::getValue('theme')))
 {
-    $theme = TSession::getValue('theme');
-    if($theme){
-        new TMessage('success', 'Temos um theme definido!');
+    // Utilizando um tema personalizado
+    $themeByStyleComponent = TSession::getValue('theme_dark');
+    if($themeByStyleComponent){
+        echo 'funcionou!';
+    } else{
+        'deu errado!';
     }
 }
 
